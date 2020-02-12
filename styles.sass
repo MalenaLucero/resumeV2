@@ -6,13 +6,32 @@ $medium-font: 16px
 $small-font: 10px
 
 body 
+    margin: 0
     color: white
     height: 100vh
     display: flex
     align-items: center
     font-family: $normal-font
+    transition: background 1s
     background: rgb(4,144,152)
     background: linear-gradient(54deg, rgba(4,144,152,1) 0%, rgba(9,103,135,1) 41%, rgba(9,99,134,1) 50%, rgba(9,102,135,1) 57%, rgba(4,144,152,1) 100%)
+    background-repeat: no-repeat
+    position: relative
+
+.transitionCurtain
+    width: 100vw
+    height: 100vh
+    position: absolute
+    background-color: white
+    transition: opacity 0.8s
+    z-index: -1
+
+.curtainOpacityAppear
+    opacity: 1
+
+.curtainOpacityDissapear
+    opacity: 0
+
 
 .main-container
     display: grid
@@ -20,28 +39,50 @@ body
     grid-template-rows: 80px 80px 80px 200px
     height: 500px
     margin: 0 auto
+    @media(max-width: 700px)
+        grid-template-columns: auto
+        margin: 0 20px
     h2
-        justify-self: center
         align-self: center
         font-size: $big-font
         margin: 0
-        transition: font-size 0.8s
-        &:hover
-            font-size: $very-big-font
+        transition: all 1s
+
+a
+    text-decoration: none
+    color: white
+    &:after
+        content: ''
+        display: block
+        width: 0
+        height: 2px
+        background: white
+        transition: width 0.5s
+    &:hover::after
+        width: 100%
 
 .englishHi
     grid-column: 2
     grid-row: 1
+    justify-self: center
     
 
 .spanishHi
     grid-column: 1
     grid-row: 2
+    justify-self: center
+    @media(max-width: 700px)
+        grid-column: 1 / span 2
+        justify-self: start
 
 .japaneseHi
     grid-column: 3
     grid-row: 3
     font-family: $japanese-font
+    justify-self: center
+    @media(max-width: 700px)
+        grid-column: 2 / span 2
+        justify-self: end
 
 .whoAmI
     grid-column: 2
@@ -49,3 +90,17 @@ body
     align-self: center
     text-align: center
     font-size: $medium-font
+    transition: opacity 1s
+
+.dissapear
+    opacity: 0
+
+
+.appear
+    opacity: 1
+
+.show
+    display: none
+
+.hide
+    display: block
