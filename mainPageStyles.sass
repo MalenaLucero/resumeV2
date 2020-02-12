@@ -1,0 +1,78 @@
+$normal-font: 'Poppins', sans-serif
+$japanese-font: 'Noto Serif JP', serif
+$very-big-font: 34px
+$big-font: 32px
+$medium-font: 16px
+$small-font: 10px
+$dark-color: #0c084c
+$main-color: #096386
+
+body
+    font-family: $normal-font
+    position: relative
+    margin: 0
+    height: 100vh
+
+h1
+    color: $dark-color
+    span
+        color: $main-color
+
+p
+    color: grey
+
+.transitionCurtain
+    width: 95vw
+    height: 95vh
+    top: 0
+    left: 0
+    position: absolute
+    background-color: white
+    transition: opacity 0.8s
+    &.opacityAppear
+        opacity: 1
+    &.opacityDisappear
+        opacity: 0
+
+.mainPageContent
+    color: black
+    margin: 10px 50px
+    display: grid
+    grid-template-columns: 50fr 50fr
+    grid-column-gap: 50px
+    @media(max-width: 700px)
+
+.leftColumn
+    display: flex
+    flex-direction: column
+    @media(max-width: 700px)
+        grid-column: 1 / span 2
+        flex-direction: column-reverse
+    p
+        text-align: justify
+
+.rightColumn
+    @media(max-width: 700px)
+        grid-column: 1 / span 2
+
+.menu
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+        cursor: pointer
+        width: 170px
+        padding: 10px
+        margin: 5px 0
+        background-color: $main-color
+        &:hover
+            background-color: $dark-color
+    a
+        color: white
+        text-decoration: none
+
+.show
+    display: block
+
+.hide
+    display: none

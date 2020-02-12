@@ -19,13 +19,5 @@ const intro = () =>{
 const transitionCurtain = () =>{
     const curtain = document.getElementById('transitionCurtain')
     setTimeout(()=>curtain.classList.replace('curtainOpacityDissapear', 'curtainOpacityAppear'), 0)
-    setTimeout(()=> curtain.classList.replace('curtainOpacityAppear', 'curtainOpacityDissapear'),longDelay)
-    setTimeout(()=>{
-        const introContainer = document.getElementById('introContainer')
-        introContainer.classList.replace('show', 'hide')
-        const mainPage = document.getElementById('mainPage')
-        mainPage.classList.replace('hide', 'show')
-        const body = document.getElementById('body')
-        body.classList.replace('intro', 'main')
-    },longDelay)
+    setTimeout(()=>window.location.href="mainPage.html", longDelay)
 }

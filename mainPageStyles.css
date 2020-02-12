@@ -1,0 +1,90 @@
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  margin: 0;
+  height: 100vh;
+}
+
+h1 {
+  color: #0c084c;
+}
+h1 span {
+  color: #096386;
+}
+
+p {
+  color: grey;
+}
+
+.transitionCurtain {
+  width: 95vw;
+  height: 95vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: white;
+  transition: opacity 0.8s;
+}
+.transitionCurtain.opacityAppear {
+  opacity: 1;
+}
+.transitionCurtain.opacityDisappear {
+  opacity: 0;
+}
+
+.mainPageContent {
+  color: black;
+  margin: 10px 50px;
+  display: grid;
+  grid-template-columns: 50fr 50fr;
+  grid-column-gap: 50px;
+}
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 700px) {
+  .leftColumn {
+    grid-column: 1/span 2;
+    flex-direction: column-reverse;
+  }
+}
+.leftColumn p {
+  text-align: justify;
+}
+
+@media (max-width: 700px) {
+  .rightColumn {
+    grid-column: 1/span 2;
+  }
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  cursor: pointer;
+  width: 170px;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #096386;
+}
+.menu li:hover {
+  background-color: #0c084c;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=mainPageStyles.css.map */
