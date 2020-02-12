@@ -1,0 +1,51 @@
+$normal-font: 'Poppins', sans-serif
+$japanese-font: 'Noto Serif JP', serif
+$very-big-font: 34px
+$big-font: 32px
+$medium-font: 16px
+$small-font: 10px
+
+body 
+    color: white
+    height: 100vh
+    display: flex
+    align-items: center
+    font-family: $normal-font
+    background: rgb(4,144,152)
+    background: linear-gradient(54deg, rgba(4,144,152,1) 0%, rgba(9,103,135,1) 41%, rgba(9,99,134,1) 50%, rgba(9,102,135,1) 57%, rgba(4,144,152,1) 100%)
+
+.main-container
+    display: grid
+    grid-template-columns: 200px 300px 200px
+    grid-template-rows: 80px 80px 80px 200px
+    height: 500px
+    margin: 0 auto
+    h2
+        justify-self: center
+        align-self: center
+        font-size: $big-font
+        margin: 0
+        transition: font-size 0.8s
+        &:hover
+            font-size: $very-big-font
+
+.englishHi
+    grid-column: 2
+    grid-row: 1
+    
+
+.spanishHi
+    grid-column: 1
+    grid-row: 2
+
+.japaneseHi
+    grid-column: 3
+    grid-row: 3
+    font-family: $japanese-font
+
+.whoAmI
+    grid-column: 2
+    grid-row: 4
+    align-self: center
+    text-align: center
+    font-size: $medium-font
