@@ -8,13 +8,39 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP|Poppins&display=swap" rel="stylesheet">
     <script src="main.js" type="text/javascript"></script>
 </head>
-<body onload="initialize()">
+<body onload="initialize()" class="intro" id="body">
     <div class="transitionCurtain curtainOpacityDissapear curtainZIndexDissapear" id="transitionCurtain"></div>
-    <div class="main-container">
-        <h2 class="englishHi dissapear" id="englishHi"><a href="#" onclick="transitionCurtain()">Hi!</a></h2>
-        <h2 class="spanishHi dissapear" id="spanishHi"><a href="#" onclick="transitionCurtain()">¡Hola!</a></h2>
-        <h2 class="japaneseHi dissapear" id="japaneseHi"><a href="#" onclick="transitionCurtain()">こんにちは</a></h2>
-        <p class="whoAmI dissapear" id="whoAmI">I'm Malena Lucero and I'm a developer looking for my first opportunity in IT. To learn more about me click on your language!</p>
+    <!--INTRO-->
+    <div class="introContainer show" id="introContainer">
+        <div class="introContent">
+            <h2 class="englishHi dissapear" id="englishHi"><a href="#" onclick="transitionCurtain()">Hi!</a></h2>
+            <h2 class="spanishHi dissapear" id="spanishHi"><a href="#" onclick="transitionCurtain()">¡Hola!</a></h2>
+            <h2 class="japaneseHi dissapear" id="japaneseHi"><a href="#" onclick="transitionCurtain()">こんにちは</a></h2>
+            <p class="whoAmI dissapear" id="whoAmI">I'm Malena Lucero and I'm a developer looking for my first opportunity in IT. To learn more about me click on your language!</p>
+        </div>  
+    </div>
+    <!--MAIN-->
+    <div class="mainPage hide" id="mainPage">
+        <div class="mainPageContent">
+            <div class="leftColumn">
+                <div class="presentation">
+                    <h1>Hi! I'm Malena Lucero</h1>
+                    <p>I'm a junior developer located in Buenos Aires, Argentina, looking for chances to grow in the field. I'm studying Systems at UBA, I have a bachelor's degree in English to Spanish translation and I know a bit of Japanese.</p>  
+                    <p>I feel comfortable using React, Javascript, HTML, CSS, SASS, Nodejs, Express and MongoDB.</p>
+                </div>
+                <ul id="menu" class="menu">
+                    <li><a href="#" onclick="backToIntro()">BACK</a></li>
+                    <li><a href="#" onclick="technologies()">TECHNOLOGIES</a></li>
+                    <li><a href="#" onclick="education()">EDUCATION</a></li>
+                    <li><a href="#" onclick="languages()">LANGUAGES</a></li>
+                    <li><a href="#" onclick="portfolio()">PORTFOLIO</a></li>
+                    <li><a href="#" onclick="contact()">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="rightColumn">
+                <h3>Education</h3>
+            </div> 
+        </div>
     </div>
 </body>
 </html>

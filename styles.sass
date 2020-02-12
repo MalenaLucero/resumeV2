@@ -4,6 +4,8 @@ $very-big-font: 34px
 $big-font: 32px
 $medium-font: 16px
 $small-font: 10px
+$dark-color: #0c084c
+$main-color: #096386
 
 body 
     margin: 0
@@ -13,10 +15,13 @@ body
     align-items: center
     font-family: $normal-font
     transition: background 1s
-    background: rgb(4,144,152)
-    background: linear-gradient(54deg, rgba(4,144,152,1) 0%, rgba(9,103,135,1) 41%, rgba(9,99,134,1) 50%, rgba(9,102,135,1) 57%, rgba(4,144,152,1) 100%)
-    background-repeat: no-repeat
     position: relative
+    &.intro
+        background: rgb(4,144,152)
+        background: linear-gradient(54deg, rgba(4,144,152,1) 0%, rgba(9,103,135,1) 41%, rgba(9,99,134,1) 50%, rgba(9,102,135,1) 57%, rgba(4,144,152,1) 100%)
+        background-repeat: no-repeat
+    &.main
+        background: white
 
 .transitionCurtain
     width: 100vw
@@ -32,8 +37,10 @@ body
 .curtainOpacityDissapear
     opacity: 0
 
+.introContainer
+    margin: 0 auto
 
-.main-container
+.introContent
     display: grid
     grid-template-columns: 200px 300px 200px
     grid-template-rows: 80px 80px 80px 200px
@@ -92,6 +99,21 @@ a
     font-size: $medium-font
     transition: opacity 1s
 
+.mainPage
+    color: black
+
+.mainPageContent
+    margin: 50px
+    display: grid
+    grid-template-columns: 50fr 50fr
+    grid-column-gap: 50px
+
+.menu
+    list-style: none
+    margin: 0
+    padding: 0
+    color: white
+
 .dissapear
     opacity: 0
 
@@ -100,7 +122,7 @@ a
     opacity: 1
 
 .show
-    display: none
+    display: block
 
 .hide
-    display: block
+    display: none
