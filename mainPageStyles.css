@@ -32,9 +32,28 @@ p {
   opacity: 0;
 }
 
+.diagonalContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.diagonalContainer .skewLeft {
+  height: 500px;
+  width: 100vw;
+  background-color: #0c084c;
+  transform: skewY(-25deg) translateY(-550px);
+}
+.diagonalContainer .skewRight {
+  height: 300px;
+  width: 100vw;
+  background-color: #096386;
+  transform: skewY(30deg) translateY(-250px);
+}
+
 .mainPageContent {
   color: black;
-  margin: 10px 50px;
+  margin: 0 50px;
   display: grid;
   grid-template-columns: 50fr 50fr;
   grid-column-gap: 50px;
