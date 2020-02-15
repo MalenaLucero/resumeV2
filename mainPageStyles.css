@@ -6,9 +6,6 @@ body {
 }
 
 h1 {
-  color: #0c084c;
-}
-h1 span {
   color: #096386;
 }
 
@@ -32,23 +29,30 @@ p {
   opacity: 0;
 }
 
-.diagonalContainer {
+.mainPage {
+  position: relative;
+}
+
+.skewRight {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
-}
-.diagonalContainer .skewLeft {
-  height: 500px;
+  height: 600px;
   width: 100vw;
   background-color: #0c084c;
-  transform: skewY(-25deg) translateY(-550px);
+  transform: skewY(-30deg) translateY(-300px);
+  z-index: -1;
 }
-.diagonalContainer .skewRight {
-  height: 300px;
+
+.skewLeft {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 350px;
   width: 100vw;
   background-color: #096386;
-  transform: skewY(30deg) translateY(-250px);
+  transform: skewY(30deg) translateY(-300px);
+  z-index: -2;
 }
 
 .mainPageContent {
@@ -59,8 +63,10 @@ p {
   grid-column-gap: 50px;
 }
 .leftColumn {
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 }
 @media (max-width: 700px) {
   .leftColumn {
@@ -72,9 +78,24 @@ p {
   text-align: justify;
 }
 
+.rightColumn {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-top: 1px solid #0c084c;
+  border-left: 1px solid #0c084c;
+  border-bottom: 1px solid #096386;
+  border-right: 1px solid #096386;
+  align-self: center;
+  height: 80vh;
+  overflow: scroll;
+}
 @media (max-width: 700px) {
   .rightColumn {
     grid-column: 1/span 2;
+    padding: 0;
+    border: none;
+    height: 100%;
+    overflow: auto;
   }
 }
 
@@ -82,8 +103,12 @@ p {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .menu li {
+  border: 1px solid #096386;
   cursor: pointer;
   width: 170px;
   padding: 10px;
