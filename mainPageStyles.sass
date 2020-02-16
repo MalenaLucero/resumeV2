@@ -32,8 +32,6 @@ p
     &.opacityDisappear
         opacity: 0
 
-.mainPage
-    position: relative
 
 .skewRight
     position: absolute
@@ -65,42 +63,50 @@ p
     z-index: -2
 
 .mainPageContent
-    color: black
     margin: 0 50px
-    display: grid
-    grid-template-columns: 50fr 50fr
-    grid-column-gap: 50px
+    display: flex
+    flex-direction: row-reverse
     @media(max-width: 700px)
+        display: block
 
 .leftColumn
-    height: 100vh
-    display: flex
-    flex-direction: column
-    justify-content: space-evenly
+    width: 40vw
+    position: fixed
+    top: 0
+    left: 50px
     @media(max-width: 700px)
-        grid-column: 1 / span 2
-        flex-direction: column-reverse
+        position: static
+        width: 100%
+    .leftColumnContent
+        height: 100vh
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        @media(max-width: 700px)
+            flex-direction: column-reverse
     p
         text-align: justify
 
 .rightColumn
+    flex-basis: 50%
+    align-self: flex-end
     @media(max-width: 700px)
-        grid-column: 1 / span 2
-        height: 100%
+        width: 100%    
+
+
+    
 
 .menu
     list-style: none
     margin: 0
     padding: 0
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
+    display: grid
+    grid-template-columns: 50fr 50fr
+    grid-gap: 10px
     li
         border: 1px solid $main-color
         cursor: pointer
-        width: 170px
         padding: 10px
-        margin: 5px 0
         background-color: $main-color
         &:hover
             background-color: $dark-color
