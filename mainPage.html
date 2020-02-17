@@ -27,14 +27,17 @@
                         <p>I feel comfortable using React, Javascript, HTML, CSS, SASS, Nodejs, Express and MongoDB.</p>
                     </div>
                     <!--MENU-->
-                    <ul id="menu" class="menu">
-                        <li><a href="#" onclick="showSection('portfolio')">PORTFOLIO</a></li>
-                        <li><a href="#" onclick="showSection('technologies')">TECHNOLOGIES</a></li>
-                        <li><a href="#" onclick="showSection('education')">EDUCATION</a></li>
-                        <li><a href="#" onclick="showSection('languages')">LANGUAGES</a></li>
-                        <li><a href="#" onclick="showSection('contact')">CONTACT</a></li>
-                        <li><a href="#" onclick="showSection('download')">DOWNLOAD RESUME</a></li>
-                    </ul> 
+                    <div class="menuContainer">
+                        <a id="menuBtn" class="menuBtn show" href="#" onclick="toggleMobileMenu()">X</a> 
+                        <ul id="menu" class="menu hide">
+                            <li><a href="#" onclick="showSection('portfolio')">PORTFOLIO</a></li>
+                            <li><a href="#" onclick="showSection('technologies')">TECHNOLOGIES</a></li>
+                            <li><a href="#" onclick="showSection('education')">EDUCATION</a></li>
+                            <li><a href="#" onclick="showSection('languages')">LANGUAGES</a></li>
+                            <li><a href="#" onclick="showSection('contact')">CONTACT</a></li>
+                            <li><a href="#" onclick="showSection('download')">DOWNLOAD RESUME</a></li>
+                        </ul> 
+                    </div>
                 </div>
             </div>
             <div class="rightColumn">

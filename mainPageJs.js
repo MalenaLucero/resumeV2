@@ -6,6 +6,11 @@ const data = {
 
 const initialize = () =>{
     curtainDissapear()
+    if(window.innerWidth > 700){
+        const menuBtn = document.getElementById('menuBtn')
+        menuBtn.classList.replace('show', 'hide')
+        toggleMobileMenu()
+    }
 }
 
 const showSection = sectionName =>{
@@ -16,6 +21,14 @@ const showSection = sectionName =>{
     })
     const sectionToShow = document.getElementById(`${sectionName}Section`)
     sectionToShow.classList.replace('hide', 'show')
+    if(window.innerWidth < 700){
+        toggleMobileMenu()
+    }
+}
+
+const toggleMobileMenu = () =>{
+    const menu = document.getElementById('menu')
+    menu.classList.toggle('hide')
 }
 
 const curtainDissapear = () =>{

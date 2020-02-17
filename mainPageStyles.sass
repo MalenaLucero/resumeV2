@@ -83,6 +83,7 @@ p
         flex-direction: column
         justify-content: space-evenly
         @media(max-width: 700px)
+            height: 100%
             flex-direction: column-reverse
     p
         text-align: justify
@@ -93,8 +94,8 @@ p
     @media(max-width: 700px)
         width: 100%    
 
-
-    
+.menuContainer
+    position: relative
 
 .menu
     list-style: none
@@ -103,9 +104,19 @@ p
     display: grid
     grid-template-columns: 50fr 50fr
     grid-gap: 10px
+    @media(max-width: 700px)
+        grid-template-columns: 100%
+        grid-gap: 0px
+        position: absolute
     li
         border: 1px solid $main-color
         background-color: $main-color
+        width: calc(100vw - 100px)
+        @media(max-width: 700px)
+            border-bottom: 1px solid grey
+            border-top: none
+            border-left: none
+            border-right: none
         &:hover
             background-color: $dark-color
     a
@@ -115,6 +126,17 @@ p
         text-decoration: none
         width: 100%
         height: 100%
+
+.menuBtn
+    background-color: $main-color
+    display: inline-block
+    padding: 10px 0
+    color: white
+    text-decoration: none
+    width: 100%
+    height: 100%
+    text-align: center
+    border-bottom: 1px solid grey
 
 .show
     display: block
