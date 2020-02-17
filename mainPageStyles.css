@@ -110,8 +110,10 @@ p {
   }
 }
 
-.menuContainer {
-  position: relative;
+@media (max-width: 700px) {
+  .menuContainer {
+    position: relative;
+  }
 }
 
 .menu {
@@ -132,10 +134,10 @@ p {
 .menu li {
   border: 1px solid #096386;
   background-color: #096386;
-  width: calc(100vw - 100px);
 }
 @media (max-width: 700px) {
   .menu li {
+    width: calc(100vw - 100px);
     border-bottom: 1px solid grey;
     border-top: none;
     border-left: none;
